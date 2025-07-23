@@ -1,0 +1,308 @@
+/* 
+ * CSS CUSTOM PROPERTIES (VARIABLES)
+ * These match the original Jeremy Harris site design system
+ */
+
+ :root {
+    /* Color swatches from original site */
+    --swatch-1: rgba(0, 0, 0, 0.85);
+    --swatch-2: rgba(0, 0, 0, 0.75);
+    --swatch-3: rgba(0, 0, 0, 0.6);
+    --swatch-4: rgba(0, 0, 0, 0.4);
+    --swatch-5: rgba(0, 0, 0, 0.25);
+    --swatch-6: #beb1ff;
+    --swatch-7: #e2b1ff;
+    --swatch-8: #fca972;
+    --swatch-9: rgba(0, 0, 0, 0.11);
+    --swatch-10: #000000;
+    --swatch-11: #0b1215;
+    --swatch-12: #0a0a0a;
+    --swatch-13: #100d08;
+    --swatch-14: #0c0c0c;
+    --swatch-15: #080808;
+    --swatch-16: #ffffff;
+    --swatch-17: #f2f2f2;
+    --swatch-18: #b4b4b4;
+    --swatch-19: #e1e1e1;
+    
+    /* Main colors used throughout the site */
+    --bg-color: #0c0c0c;           /* Dark background */
+    --text-color: #e1e1e1;        /* Light text */
+    --text-secondary: var(--swatch-1); /* Darker text for headings */
+    
+    /* Typography system */
+    --font-primary: 'Inter Variable', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-secondary: 'JetBrains Mono Variable', 'JetBrains Mono', monospace;
+    
+    /* Mobile scaling */
+    --mobile-scale: 1.4;
+    --mobile-padding-offset: 0.25;
+    
+    /* Viewport height (for full-screen layouts) */
+    --viewport-height: 100vh;
+}
+
+/* 
+ * CSS RESET AND BASE STYLES
+ * Ensures consistent styling across all browsers
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Set viewport height for mobile compatibility */
+    --viewport-height: 100vh;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    min-height: var(--viewport-height);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+/* 
+ * CONTENT CONTAINER AND LAYOUT
+ * Matches the original site's spacing and positioning
+ */
+
+ .content {
+    border-color: var(--swatch-1);
+    border-width: 0rem;
+    border-style: solid;
+    border-radius: 0rem;
+    margin: 2rem;
+    width: 100%;
+    max-width: none;
+}
+
+.page-content {
+    padding: 3rem;
+    text-align: left;
+    border-width: 0rem;
+    border-color: var(--swatch-1);
+    border-style: solid;
+    border-radius: 0rem;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* 
+ * TYPOGRAPHY STYLES
+ * Matches the original Jeremy Harris site typography system
+ */
+
+ .bodycopy {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 0;
+    display: block;
+    font-weight: 400;
+}
+
+.bodycopy a {
+    color: var(--text-color);
+    border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.bodycopy a:hover {
+    opacity: 0.8;
+}
+
+.bodycopy a:active {
+    opacity: 0.7;
+}
+
+/* Heading styles */
+h1 {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--swatch-1);
+    letter-spacing: 0em;
+}
+
+h1 a {
+    color: var(--swatch-1);
+    text-decoration: none;
+}
+
+h2 {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 440;
+    margin: 0;
+    color: var(--swatch-1);
+    font-size: 3.8rem;
+    line-height: 1.1;
+    letter-spacing: 0em;
+}
+
+h2 a {
+    color: var(--swatch-1);
+    text-decoration: none;
+}
+
+/* 
+ * PAGE TRANSITION EFFECTS
+ * Smooth transitions when navigating between pages
+ */
+
+ .page-content {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.page-content.loading {
+    opacity: 0.5;
+}
+
+/* Back to home link styling */
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+/* 
+ * MOBILE RESPONSIVE DESIGN
+ * Matches original site's mobile behavior
+ */
+
+/* Tablet and small desktop */
+@media (max-width: 768px) {
+    .bodycopy {
+        font-size: 1.2rem;
+    }
+    
+    .page-content {
+        padding: 2rem;
+    }
+    
+    .content {
+        margin: 1rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .bodycopy {
+        font-size: 1.1rem;
+    }
+    
+    .page-content {
+        padding: 1.5rem;
+    }
+    
+    .content {
+        margin: 0.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* 
+ * INTERACTIVE STATES AND EFFECTS
+ * Hover and active states matching the original site
+ */
+
+ a:active,
+ .linked:active {
+     opacity: 0.7;
+ }
+ 
+ .page a.active {
+     color: #ffffff;
+ }
+ 
+ /* Focus states for accessibility */
+ a:focus {
+     outline: 2px solid var(--swatch-6);
+     outline-offset: 2px;
+ }
+ 
+ /* Selection color */
+ ::selection {
+     background-color: var(--swatch-6);
+     color: var(--bg-color);
+ }
+ 
+ /* 
+ * PAGE-SPECIFIC STYLING
+ * Styles for individual page content
+ */
+
+.page-section {
+    margin-bottom: 1rem;
+}
+
+.page-section h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.page-section p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Better spacing for content lists */
+.page-section p + p {
+    margin-top: 0.5rem;
+}
+
+/* Style for content emphasis */
+.page-section strong {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* Mobile adjustments for page content */
+@media (max-width: 768px) {
+    .page-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-section h3 {
+        font-size: 1.1rem;
+    }
+}

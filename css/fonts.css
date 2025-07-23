@@ -1,0 +1,66 @@
+/* Inter Variable - Alternative to Favorit Variable */
+@font-face {
+    font-family: 'Inter Variable';
+    src: url('../assets/fonts/inter/Inter-Variable.woff2') format('woff2-variations'),
+         url('../assets/fonts/inter/Inter-Variable.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Inter Static Fallbacks - in case variable fonts don't work */
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter/Inter-Regular.woff2') format('woff2'),
+         url('../assets/fonts/inter/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter/Inter-Medium.woff2') format('woff2'),
+         url('../assets/fonts/inter/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter/Inter-SemiBold.woff2') format('woff2'),
+         url('../assets/fonts/inter/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* JetBrains Mono Variable - Alternative to Diatype Variable */
+@font-face {
+    font-family: 'JetBrains Mono Variable';
+    src: url('../assets/fonts/jetbrains-mono/JetBrainsMono-Variable.woff2') format('woff2-variations'),
+         url('../assets/fonts/jetbrains-mono/JetBrainsMono-Variable.ttf') format('truetype-variations');
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* JetBrains Mono Static Fallbacks */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../assets/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') format('woff2'),
+         url('../assets/fonts/jetbrains-mono/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../assets/fonts/jetbrains-mono/JetBrainsMono-Medium.woff2') format('woff2'),
+         url('../assets/fonts/jetbrains-mono/JetBrainsMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
